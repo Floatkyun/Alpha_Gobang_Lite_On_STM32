@@ -46,7 +46,7 @@ class AlphaZeroMCTS:
             node.backup(-value)
 
       
-        T = 10 if self.is_self_play and len(chess_board.state) <= 30 else 1e-3
+        T = 1 if self.is_self_play and len(chess_board.state) <= 30 else 1e-3
         visits = np.array([i.N for i in self.root.children.values()])
         try:
             pi_ = self.__getPi(visits, T)
