@@ -1,0 +1,1 @@
+GEN_CSRCS += _black_alpha_48x48.c _white_alpha_48x48.c
