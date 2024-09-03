@@ -1,7 +1,7 @@
 # Alpha_Gobang_Lite_On_STM32
 本项目是将AlphaGo轻量化魔改后移植到STM32单片机的项目
 
-# 本项目训练框架由项目[Alpha-Gobang-Zero](https://github.com/zhiyiYo/Alpha-Gobang-Zero)修改而来，欢迎给原项目点star，阅读原项目博客[点击这里](https://www.cnblogs.com/zhiyiYo/p/14683450.html)。以下是原项目的项目大纲，本项目部分修改了其训练策略和网络结构。
+# 本项目训练框架由项目[Alpha-Gobang-Zero](https://github.com/zhiyiYo/Alpha-Gobang-Zero)修改而来，欢迎给原项目点star，阅读原项目博客[点击这里](https://www.cnblogs.com/zhiyiYo/p/14683450.html)。以下是原项目的项目大纲，本项目部分修改了其训练策略，并对其模型引入[U_Lite网络](https://github.com/duong-db/U-Lite)进行轻量化处理。
 
 
 # 思路
