@@ -1,0 +1,1170 @@
+{
+    "_allocate_inputs": 4,
+    "_allocate_outputs": 4,
+    "cli_parameters": "analyze --target stm32h7 --name network -m D:/H743/Alpha-GoLite/Alpha-Gobang-Zero-master/net.onnx --compression none --verbosity 1 --allocate-inputs --allocate-outputs --workspace C:/Users/hp/AppData/Local/Temp/mxAI_workspace3884756301500755564533978212880 --output C:/Users/hp/.stm32cubemx/network_output",
+    "cli_version": {
+        "extra": "19802",
+        "major": 9,
+        "micro": 0,
+        "minor": 0
+    },
+    "cli_version_str": "9.0.0-19802",
+    "code_size": 0,
+    "compression": [],
+    "date_time": "Sat Aug 24 17:16:25 2024",
+    "error": 0,
+    "error_str": [],
+    "exec_cmd": "analyze",
+    "exec_duration": 0.0,
+    "hash": "0x9e8f40455f3ee0cdf6de38910a6ade87",
+    "inputs": [
+        "input"
+    ],
+    "layers": [
+        {
+            "c_id": [
+                33
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 13122,
+                "psize": 52488,
+                "rom_size": 52812
+            },
+            "id": 26,
+            "inputs": [],
+            "name": "policy_head_fc_weight",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 81,
+                "psize": 324,
+                "rom_size": 0
+            },
+            "id": 26,
+            "inputs": [],
+            "name": "policy_head_fc_bias",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [
+                26
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 10368,
+                "psize": 41472,
+                "rom_size": 41984
+            },
+            "id": 31,
+            "inputs": [],
+            "name": "value_head_fc_0_weight",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 128,
+                "psize": 512,
+                "rom_size": 0
+            },
+            "id": 31,
+            "inputs": [],
+            "name": "value_head_fc_0_bias",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [
+                28
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 128,
+                "psize": 512,
+                "rom_size": 516
+            },
+            "id": 33,
+            "inputs": [],
+            "name": "value_head_fc_2_weight",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 1,
+                "psize": 4,
+                "rom_size": 0
+            },
+            "id": 33,
+            "inputs": [],
+            "name": "value_head_fc_2_bias",
+            "original": "Gemm",
+            "type": "Placeholder"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 1944,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        9,
+                        6
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 0,
+            "inputs": [],
+            "name": "input",
+            "original": "",
+            "type": "Input"
+        },
+        {
+            "c_id": [
+                1
+            ],
+            "extras": {
+                "n_macc": 560000,
+                "n_params": 7040,
+                "psize": 28160,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 28160
+            },
+            "id": 1,
+            "inputs": [
+                "input"
+            ],
+            "name": "_conv_conv_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                0,
+                2
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 2,
+            "inputs": [
+                "_conv_conv_Conv_output_0"
+            ],
+            "name": "_conv_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                3
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 3,
+            "inputs": [
+                "_conv_Relu_output_0"
+            ],
+            "name": "_residues_residues_0_conv1_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                4
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 4,
+            "inputs": [
+                "_residues_residues_0_conv1_Conv_output_0"
+            ],
+            "name": "_residues_residues_0_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                5
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 5,
+            "inputs": [
+                "_residues_residues_0_Relu_output_0"
+            ],
+            "name": "_residues_residues_0_conv2_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                6
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 6,
+            "inputs": [
+                "_residues_residues_0_conv2_Conv_output_0",
+                "_conv_Relu_output_0"
+            ],
+            "name": "_residues_residues_0_Add_output_0",
+            "original": "Add",
+            "type": "Eltwise"
+        },
+        {
+            "c_id": [
+                7
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 7,
+            "inputs": [
+                "_residues_residues_0_Add_output_0"
+            ],
+            "name": "_residues_residues_0_Relu_1_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                8
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 8,
+            "inputs": [
+                "_residues_residues_0_Relu_1_output_0"
+            ],
+            "name": "_residues_residues_1_conv1_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                9
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 9,
+            "inputs": [
+                "_residues_residues_1_conv1_Conv_output_0"
+            ],
+            "name": "_residues_residues_1_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                10
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 10,
+            "inputs": [
+                "_residues_residues_1_Relu_output_0"
+            ],
+            "name": "_residues_residues_1_conv2_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                11
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 11,
+            "inputs": [
+                "_residues_residues_1_conv2_Conv_output_0",
+                "_residues_residues_0_Relu_1_output_0"
+            ],
+            "name": "_residues_residues_1_Add_output_0",
+            "original": "Add",
+            "type": "Eltwise"
+        },
+        {
+            "c_id": [
+                12
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 12,
+            "inputs": [
+                "_residues_residues_1_Add_output_0"
+            ],
+            "name": "_residues_residues_1_Relu_1_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                13
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 13,
+            "inputs": [
+                "_residues_residues_1_Relu_1_output_0"
+            ],
+            "name": "_residues_residues_2_conv1_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                14
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 14,
+            "inputs": [
+                "_residues_residues_2_conv1_Conv_output_0"
+            ],
+            "name": "_residues_residues_2_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                15
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 15,
+            "inputs": [
+                "_residues_residues_2_Relu_output_0"
+            ],
+            "name": "_residues_residues_2_conv2_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                16
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 16,
+            "inputs": [
+                "_residues_residues_2_conv2_Conv_output_0",
+                "_residues_residues_1_Relu_1_output_0"
+            ],
+            "name": "_residues_residues_2_Add_output_0",
+            "original": "Add",
+            "type": "Eltwise"
+        },
+        {
+            "c_id": [
+                17
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 17,
+            "inputs": [
+                "_residues_residues_2_Add_output_0"
+            ],
+            "name": "_residues_residues_2_Relu_1_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                18
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 18,
+            "inputs": [
+                "_residues_residues_2_Relu_1_output_0"
+            ],
+            "name": "_residues_residues_3_conv1_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                19
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 19,
+            "inputs": [
+                "_residues_residues_3_conv1_Conv_output_0"
+            ],
+            "name": "_residues_residues_3_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                20
+            ],
+            "extras": {
+                "n_macc": 11944064,
+                "n_params": 147584,
+                "psize": 590336,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 590336
+            },
+            "id": 20,
+            "inputs": [
+                "_residues_residues_3_Relu_output_0"
+            ],
+            "name": "_residues_residues_3_conv2_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                21
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 21,
+            "inputs": [
+                "_residues_residues_3_conv2_Conv_output_0",
+                "_residues_residues_2_Relu_1_output_0"
+            ],
+            "name": "_residues_residues_3_Add_output_0",
+            "original": "Add",
+            "type": "Eltwise"
+        },
+        {
+            "c_id": [
+                22
+            ],
+            "extras": {
+                "n_macc": 10368,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 41472,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        128,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 22,
+            "inputs": [
+                "_residues_residues_3_Add_output_0"
+            ],
+            "name": "_residues_residues_3_Relu_1_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                30
+            ],
+            "extras": {
+                "n_macc": 20738,
+                "n_params": 258,
+                "psize": 1032,
+                "rom_output": {
+                    "c_size": 648,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        2,
+                        9
+                    ]
+                },
+                "rom_size": 1032
+            },
+            "id": 23,
+            "inputs": [
+                "_residues_residues_3_Relu_1_output_0"
+            ],
+            "name": "_policy_head_conv_conv_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                31
+            ],
+            "extras": {
+                "n_macc": 162,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 648,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        2,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 24,
+            "inputs": [
+                "_policy_head_conv_conv_Conv_output_0"
+            ],
+            "name": "_policy_head_conv_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                32
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_size": 0
+            },
+            "id": 25,
+            "inputs": [
+                "_policy_head_conv_Relu_output_0"
+            ],
+            "name": "_policy_head_Flatten_output_0",
+            "original": "Flatten",
+            "type": "Reshape"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 13203,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 324,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        81
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 26,
+            "inputs": [
+                "_policy_head_Flatten_output_0",
+                "policy_head_fc_weight",
+                "policy_head_fc_bias"
+            ],
+            "name": "_policy_head_fc_Gemm_output_0",
+            "original": "Gemm",
+            "type": "Gemm"
+        },
+        {
+            "c_id": [
+                34
+            ],
+            "extras": {
+                "n_macc": 1215,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 324,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        81
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 27,
+            "inputs": [
+                "_policy_head_fc_Gemm_output_0"
+            ],
+            "name": "output_softmax",
+            "original": "LogSoftmax",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                23,
+                35
+            ],
+            "extras": {
+                "n_macc": 810,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 324,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        81
+                    ]
+                },
+                "rom_size": 516
+            },
+            "id": 28,
+            "inputs": [
+                "output_softmax"
+            ],
+            "name": "output",
+            "original": "LogSoftmax",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 10369,
+                "n_params": 129,
+                "psize": 516,
+                "rom_output": {
+                    "c_size": 324,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        1,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 28,
+            "inputs": [
+                "_residues_residues_3_Relu_1_output_0"
+            ],
+            "name": "_value_head_conv_conv_Conv_output_0",
+            "original": "Conv",
+            "type": "Conv2D"
+        },
+        {
+            "c_id": [
+                24
+            ],
+            "extras": {
+                "n_macc": 81,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 324,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        9,
+                        1,
+                        9
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 29,
+            "inputs": [
+                "_value_head_conv_conv_Conv_output_0"
+            ],
+            "name": "_value_head_conv_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [
+                25
+            ],
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_size": 0
+            },
+            "id": 30,
+            "inputs": [
+                "_value_head_conv_Relu_output_0"
+            ],
+            "name": "_value_head_Flatten_output_0",
+            "original": "Flatten",
+            "type": "Reshape"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 10496,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 512,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        128
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 31,
+            "inputs": [
+                "_value_head_Flatten_output_0",
+                "value_head_fc_0_weight",
+                "value_head_fc_0_bias"
+            ],
+            "name": "_value_head_fc_fc_0_Gemm_output_0",
+            "original": "Gemm",
+            "type": "Gemm"
+        },
+        {
+            "c_id": [
+                27
+            ],
+            "extras": {
+                "n_macc": 128,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 512,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        128
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 32,
+            "inputs": [
+                "_value_head_fc_fc_0_Gemm_output_0"
+            ],
+            "name": "_value_head_fc_fc_1_Relu_output_0",
+            "original": "Relu",
+            "type": "Nonlinearity"
+        },
+        {
+            "c_id": [],
+            "extras": {
+                "n_macc": 129,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 4,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 33,
+            "inputs": [
+                "_value_head_fc_fc_1_Relu_output_0",
+                "value_head_fc_2_weight",
+                "value_head_fc_2_bias"
+            ],
+            "name": "_value_head_fc_fc_2_Gemm_output_0",
+            "original": "Gemm",
+            "type": "Gemm"
+        },
+        {
+            "c_id": [
+                29
+            ],
+            "extras": {
+                "n_macc": 10,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 4,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 34,
+            "inputs": [
+                "_value_head_fc_fc_2_Gemm_output_0"
+            ],
+            "name": "node_128",
+            "original": "Tanh",
+            "type": "Nonlinearity"
+        }
+    ],
+    "model_files": [
+        "D:\\H743\\Alpha-GoLite\\Alpha-Gobang-Zero-master\\net.onnx"
+    ],
+    "model_n_params": 1211927,
+    "model_name": "net",
+    "model_size": 4847708,
+    "model_type": "onnx",
+    "name": "network",
+    "outputs": [
+        "output",
+        "node_128"
+    ],
+    "ram_io_size": [
+        0,
+        0
+    ],
+    "ram_size": 93696,
+    "report_version": 1.1,
+    "rom_cfact": 1.0,
+    "rom_heap_inspector": 2048,
+    "rom_inputs": [
+        {
+            "c_size": 1944,
+            "c_type": "float",
+            "name": "input"
+        }
+    ],
+    "rom_n_macc": 96305001,
+    "rom_outputs": [
+        {
+            "c_size": 324,
+            "c_type": "float",
+            "name": "output"
+        },
+        {
+            "c_size": 4,
+            "c_type": "float",
+            "name": "node_128"
+        }
+    ],
+    "rom_size": 4847708,
+    "strategy": "",
+    "tools_api_version": "9.0.0-19802",
+    "tools_version": "9.0.0-19802",
+    "val_error": -1.0,
+    "val_error_desc": "None (None) #-1",
+    "val_metrics": []
+}
