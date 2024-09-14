@@ -51,10 +51,10 @@ I (..\Core\Inc\fmc.h)(0x66CABB34)
 I (..\Core\Inc\tim.h)(0x66C9B393)
 I (..\Core\Inc\usart.h)(0x66C9ABDC)
 I (..\Core\Inc\gpio.h)(0x66C9ABDB)
-I (..\MY_APP\app.h)(0x66D5CA53)
+I (..\MY_APP\app.h)(0x66E43F51)
 I (..\RGBLCD\touch_800x480.h)(0x5F50498C)
 I (..\RGBLCD\touch_iic.h)(0x62CE1FDA)
-I (..\MY_APP\chess_board.h)(0x66D5C978)
+I (..\MY_APP\chess_board.h)(0x66E438D6)
 I (..\X-CUBE-AI\App\network.h)(0x66D5CE2E)
 I (..\X-CUBE-AI\App\network_config.h)(0x66D5CE2E)
 I (..\Middlewares\ST\AI\Inc\ai_platform.h)(0x664234E2)
@@ -1772,7 +1772,7 @@ I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h)(0x66B4D666)
 F (../X-CUBE-AI/App/network_generate_report.txt)(0x66D5CE2F)()
 F (../Middlewares/ST/AI/Lib/NetworkRuntime900_CM7_Keil.lib)(0x664234E3)()
 F (..\MY_APP\app.c)(0x66D5CC87)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/AI/Inc -I ../X-CUBE-AI/App -I ../MY_APP -I ../RGBLCD -I ../LVGL/LVGL_SRC/lvgl -I ../LVGL/LVGL_SRC/lvgl/examples/porting -I ../LVGL/generated-I./RTE/_Alpha-GoLite-IC:/Keil_v5/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Keil_v5/Keil/STM32H7xx_DFP/3.1.1/Drivers/CMSIS/Device/ST/STM32H7xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o alpha-golite/app.o -MD)
-I (..\MY_APP\app.h)(0x66D5CA53)
+I (..\MY_APP\app.h)(0x66E43F51)
 I (..\Core\Inc\main.h)(0x66CAAE13)
 I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h)(0x66B4D666)
 I (..\Core\Inc\stm32h7xx_hal_conf.h)(0x66CAAE13)
@@ -1819,7 +1819,7 @@ I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h)(0x66B4D666)
 I (..\Core\Inc\usart.h)(0x66C9ABDC)
 I (..\RGBLCD\touch_800x480.h)(0x5F50498C)
 I (..\RGBLCD\touch_iic.h)(0x62CE1FDA)
-I (..\MY_APP\chess_board.h)(0x66D5C978)
+I (..\MY_APP\chess_board.h)(0x66E438D6)
 I (..\X-CUBE-AI\App\network.h)(0x66D5CE2E)
 I (..\X-CUBE-AI\App\network_config.h)(0x66D5CE2E)
 I (..\Middlewares\ST\AI\Inc\ai_platform.h)(0x664234E2)
@@ -2054,9 +2054,9 @@ I (..\LVGL\LVGL_SRC\lvgl\examples\porting\lv_port_indev.h)(0x6651A08E)
 I (..\LVGL\generated\gui_guider.h)(0x66D43705)
 I (..\LVGL\generated\events_init.h)(0x66D43705)
 I (..\LVGL\generated\widgets_init.h)(0x66D43705)
-F (..\MY_APP\app.h)(0x66D5CA53)()
+F (..\MY_APP\app.h)(0x66E43F51)()
 F (..\MY_APP\chess_board.c)(0x66D5C967)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/AI/Inc -I ../X-CUBE-AI/App -I ../MY_APP -I ../RGBLCD -I ../LVGL/LVGL_SRC/lvgl -I ../LVGL/LVGL_SRC/lvgl/examples/porting -I ../LVGL/generated-I./RTE/_Alpha-GoLite-IC:/Keil_v5/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Keil_v5/Keil/STM32H7xx_DFP/3.1.1/Drivers/CMSIS/Device/ST/STM32H7xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o alpha-golite/chess_board.o -MD)
-I (..\MY_APP\chess_board.h)(0x66D5C978)
+I (..\MY_APP\chess_board.h)(0x66E438D6)
 I (..\Core\Inc\main.h)(0x66CAAE13)
 I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h)(0x66B4D666)
 I (..\Core\Inc\stm32h7xx_hal_conf.h)(0x66CAAE13)
@@ -2108,7 +2108,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x625260D6)
 I (..\X-CUBE-AI\App\network_data.h)(0x66D5CE2E)
 I (..\X-CUBE-AI\App\network_data_params.h)(0x66D5CE2E)
 I (..\Core\Inc\usart.h)(0x66C9ABDC)
-F (..\MY_APP\chess_board.h)(0x66D5C978)()
+F (..\MY_APP\chess_board.h)(0x66E438D6)()
 F (..\RGBLCD\touch_800x480.c)(0x66CBFB47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/AI/Inc -I ../X-CUBE-AI/App -I ../MY_APP -I ../RGBLCD -I ../LVGL/LVGL_SRC/lvgl -I ../LVGL/LVGL_SRC/lvgl/examples/porting -I ../LVGL/generated-I./RTE/_Alpha-GoLite-IC:/Keil_v5/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Keil_v5/Keil/STM32H7xx_DFP/3.1.1/Drivers/CMSIS/Device/ST/STM32H7xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o alpha-golite/touch_800x480.o -MD)
 I (..\RGBLCD\touch_800x480.h)(0x5F50498C)
 I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h)(0x66B4D666)
@@ -23893,7 +23893,7 @@ I (..\Core\Inc\main.h)(0x66CAAE13)
 F (..\LVGL\LVGL_SRC\lvgl\examples\porting\lv_port_indev.h)(0x6651A08E)()
 F (..\LVGL\LVGL_SRC\lvgl\lv_conf.h)(0x66CC93AD)()
 F (..\LVGL\LVGL_SRC\lvgl\lvgl.h)(0x66582558)()
-F (..\LVGL\generated\events_init.c)(0x66D5CE58)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/AI/Inc -I ../X-CUBE-AI/App -I ../MY_APP -I ../RGBLCD -I ../LVGL/LVGL_SRC/lvgl -I ../LVGL/LVGL_SRC/lvgl/examples/porting -I ../LVGL/generated-I./RTE/_Alpha-GoLite-IC:/Keil_v5/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Keil_v5/Keil/STM32H7xx_DFP/3.1.1/Drivers/CMSIS/Device/ST/STM32H7xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o alpha-golite/events_init.o -MD)
+F (..\LVGL\generated\events_init.c)(0x66E43D18)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/AI/Inc -I ../X-CUBE-AI/App -I ../MY_APP -I ../RGBLCD -I ../LVGL/LVGL_SRC/lvgl -I ../LVGL/LVGL_SRC/lvgl/examples/porting -I ../LVGL/generated-I./RTE/_Alpha-GoLite-IC:/Keil_v5/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Keil_v5/Keil/STM32H7xx_DFP/3.1.1/Drivers/CMSIS/Device/ST/STM32H7xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o alpha-golite/events_init.o -MD)
 I (..\LVGL\generated\events_init.h)(0x66D43705)
 I (..\LVGL\generated\gui_guider.h)(0x66D43705)
 I (..\LVGL\LVGL_SRC\lvgl\lvgl.h)(0x66582558)
@@ -24122,7 +24122,7 @@ I (..\LVGL\LVGL_SRC\lvgl\src\extra\widgets\radiobtn\..\..\..\core\lv_obj.h)(0x65
 I (..\LVGL\LVGL_SRC\lvgl\src\extra\widgets\radiobtn\..\..\layouts\flex\lv_flex.h)(0x6563D545)
 I (..\LVGL\LVGL_SRC\lvgl\src\extra\widgets\radiobtn\..\..\..\lv_conf_internal.h)(0x6563D545)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
-I (..\MY_APP\app.h)(0x66D5CA53)
+I (..\MY_APP\app.h)(0x66E43F51)
 I (..\Core\Inc\main.h)(0x66CAAE13)
 I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h)(0x66B4D666)
 I (..\Core\Inc\stm32h7xx_hal_conf.h)(0x66CAAE13)
@@ -24167,7 +24167,7 @@ I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h)(0x66B4D666)
 I (..\Core\Inc\usart.h)(0x66C9ABDC)
 I (..\RGBLCD\touch_800x480.h)(0x5F50498C)
 I (..\RGBLCD\touch_iic.h)(0x62CE1FDA)
-I (..\MY_APP\chess_board.h)(0x66D5C978)
+I (..\MY_APP\chess_board.h)(0x66E438D6)
 I (..\X-CUBE-AI\App\network.h)(0x66D5CE2E)
 I (..\X-CUBE-AI\App\network_config.h)(0x66D5CE2E)
 I (..\Middlewares\ST\AI\Inc\ai_platform.h)(0x664234E2)
@@ -24636,7 +24636,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
 I (..\LVGL\generated\gui_guider.h)(0x66D43705)
 I (..\LVGL\generated\events_init.h)(0x66D43705)
 I (..\LVGL\generated\widgets_init.h)(0x66D43705)
-I (..\MY_APP\app.h)(0x66D5CA53)
+I (..\MY_APP\app.h)(0x66E43F51)
 I (..\Core\Inc\main.h)(0x66CAAE13)
 I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h)(0x66B4D666)
 I (..\Core\Inc\stm32h7xx_hal_conf.h)(0x66CAAE13)
@@ -24681,7 +24681,7 @@ I (..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h)(0x66B4D666)
 I (..\Core\Inc\usart.h)(0x66C9ABDC)
 I (..\RGBLCD\touch_800x480.h)(0x5F50498C)
 I (..\RGBLCD\touch_iic.h)(0x62CE1FDA)
-I (..\MY_APP\chess_board.h)(0x66D5C978)
+I (..\MY_APP\chess_board.h)(0x66E438D6)
 I (..\X-CUBE-AI\App\network.h)(0x66D5CE2E)
 I (..\X-CUBE-AI\App\network_config.h)(0x66D5CE2E)
 I (..\Middlewares\ST\AI\Inc\ai_platform.h)(0x664234E2)

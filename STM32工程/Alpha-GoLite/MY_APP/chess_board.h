@@ -31,7 +31,8 @@ static int search_directions[4][2][2]={
 {{-1,-1},{1 ,1}},	//主对角线搜索
 {{1 ,-1},{-1,1}}};//副对角线搜索
 
-typedef struct chess_board_
+
+typedef struct chess_board_//棋盘类
 {
 	uint8_t chess_count;
 	uint8_t cur_player;
@@ -44,13 +45,13 @@ typedef struct chess_board_
 
 static Chess_Board cur_chessboard;
 
-void action2xy(int action ,int *row,int *col);
-int xy2action(int row,int col);
-int is_act_available(Chess_Board *chessboard_,int action);
-void init_chess_board(Chess_Board *chessboard_);
-void copy_chess_board(Chess_Board *from_,Chess_Board *to_);
-int do_action(Chess_Board *chessboard_,uint16_t action);
-int is_game_over(Chess_Board *chessboard_);
-void get_feature_planes(Chess_Board *chessboard_,float *ai_indata);
+void action2xy(int action ,int *row,int *col);//棋盘坐标变换
+int xy2action(int row,int col);//棋盘坐标变换
+int is_act_available(Chess_Board *chessboard_,int action);//检查落子位置是否空闲
+void init_chess_board(Chess_Board *chessboard_);//初始化棋盘对象
+void copy_chess_board(Chess_Board *from_,Chess_Board *to_);//复制棋盘对象
+int do_action(Chess_Board *chessboard_,uint16_t action);//在棋盘上落子
+int is_game_over(Chess_Board *chessboard_);//判断该棋盘上的游戏是否结束
+void get_feature_planes(Chess_Board *chessboard_,float *ai_indata);//获取棋盘的特征平面，供输入模型使用
 
 #endif

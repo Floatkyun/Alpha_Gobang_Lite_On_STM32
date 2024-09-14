@@ -180,24 +180,9 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
     if(disp_flush_enabled) {
         /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one*/
 
-//        int32_t x;
-//        int32_t y;
-//        for(y = area->y1; y <= area->y2; y++) {
-//            for(x = area->x1; x <= area->x2; x++) {
-//                /*Put a pixel to the display. For example:*/
-//                /*put_px(x, y, *color_p)*/
-//                color_p++;
-//            }
-//        }
-        //lcd_color_fill(area->x1, area->y1, area->x2, area->y2, (uint16_t *)color_p);
 			LTDC_Layer1->CFBAR = (uint32_t)color_p;			// ÇÐ»»ÏÔ´æµØÖ·
 			__HAL_LTDC_RELOAD_CONFIG(&hltdc);		
     }
-		//LTDC_Layer1->CFBAR = (uint32_t)color_p;		
-	
-						
-	//HAL_LTDC_ProgramLineEvent(&hltdc, 0);
-		
     /*IMPORTANT!!!
      *Inform the graphics library that you are ready with the flushing*/
     lv_disp_flush_ready(disp_drv);

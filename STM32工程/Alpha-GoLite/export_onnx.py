@@ -4,7 +4,6 @@ Created on Tue Aug 27 12:37:51 2024
 
 @author: hp
 """
-
 from torchsummary import summary
 from onnxsim import simplify
 import torch

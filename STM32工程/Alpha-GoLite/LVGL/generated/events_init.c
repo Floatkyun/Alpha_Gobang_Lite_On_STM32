@@ -24,7 +24,7 @@ static void screen_canvas_1_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_PRESSED:
 	{
-		touched_chessboard();
+		touched_chessboard();//落子回调函数
 		break;
 	}
 	default:
@@ -38,7 +38,7 @@ static void screen_btn_1_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		 get_config();
+		 get_config();//获取设置值回调函数
 		break;
 	}
 	default:
@@ -57,7 +57,7 @@ static void screen_msgbox_event_handler (lv_event_t *e)
 		switch(id) {
 		case 0:
 		{
-			play_again();
+			play_again();//重新开始游戏回调函数
 			break;
 		}
 		default:
